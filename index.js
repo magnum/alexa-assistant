@@ -323,7 +323,7 @@ var handlers = {
     
     'SearchIntent': function (overrideText) {
         
-        var overideLocale = 'en-US'
+        var overideLocale = 'it-IT'
         console.log('Locale is:- ' + locale)
         if (locale == 'en-GB' || locale == 'de-DE' || locale == 'en-AU' || locale == 'en-CA' || locale == 'en-IN' || locale == 'ja-JP'){
             overideLocale = locale
@@ -819,7 +819,7 @@ var handlers = {
 
 exports.handler = function(event, context, callback){
     var alexa = Alexa.handler(event, context);
-    locale = event.request.locale
+    locale = 'it-IT' //event.request.locale
     alexa.registerHandlers(handlers);
     //Create DynamoDB Table
     alexa.dynamoDBTableName = 'AlexaAssistantSkillSettings';
